@@ -21,6 +21,8 @@ public abstract class IngresoDefaultDataAcces<T, ID> implements IngresoDAOInterf
 
     }
 
+    public void delete(final T obj)throws IllegalStateException, IllegalArgumentException {}
+
     public T findById(final Object id)throws IllegalStateException, IllegalArgumentException {
         EntityManager em = null;
         try {
@@ -29,7 +31,7 @@ public abstract class IngresoDefaultDataAcces<T, ID> implements IngresoDAOInterf
         } catch (Exception ex) {
             throw new IllegalStateException(ex);
         }
-        return em.find(getEntityClass(), id);
+        return em.find(TipoDato,id);
     }
 
 
