@@ -7,7 +7,7 @@ import java.time.OffsetDateTime;
 
 @Entity
 @Table(name = "disctractor_area_conocimiento", schema = "public")
-public class DisctractorAreaConocimiento {
+public class DistractorAreaConocimiento {
     @Id
     @Column(name = "id_distractor_area_conocimiento", nullable = false)
     private Integer id;
