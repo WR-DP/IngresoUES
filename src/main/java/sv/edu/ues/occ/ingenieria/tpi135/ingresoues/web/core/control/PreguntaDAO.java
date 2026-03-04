@@ -1,0 +1,32 @@
+package sv.edu.ues.occ.ingenieria.tpi135.ingresoues.web.core.control;
+
+import jakarta.ejb.LocalBean;
+import jakarta.ejb.Stateless;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import sv.edu.ues.occ.ingenieria.tpi135.ingresoues.web.core.entity.DistractorAreaConocimiento;
+import sv.edu.ues.occ.ingenieria.tpi135.ingresoues.web.core.entity.Pregunta;
+
+import java.io.Serializable;
+
+@Stateless
+@LocalBean
+public class PreguntaDAO extends IngresoDefaultDataAcces<Pregunta, Object> implements Serializable {
+    @PersistenceContext(unitName = "IngresoPU")
+    private EntityManager em;
+
+// public PreguntaDAO() {
+//     super(PreguntaDAO.class);
+// }
+
+    @Override
+    public EntityManager getEntityManager() {
+        return null;
+    }
+
+    @Override
+    protected Class<Pregunta> getEntityClass() {
+        return null;
+    }
+
+}
