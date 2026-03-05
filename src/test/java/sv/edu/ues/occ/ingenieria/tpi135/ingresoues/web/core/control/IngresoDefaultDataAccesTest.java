@@ -44,24 +44,6 @@ class IngresoDefaultDataAccesTest {
             protected Class<TestEntity> getEntityClass() {
                 return TestEntity.class;
             }
-
-            // Implementaciones vacías para los métodos abstractos que aun faltan en la clase abstracta
-            // pero vienen de la interfaz.
-            @Override
-            public TestEntity update(TestEntity obj) throws IllegalStateException, IllegalArgumentException {
-                return null;
-            }
-
-            @Override
-            public TestEntity findById(Object id) throws IllegalStateException, IllegalArgumentException {
-                return null;
-            }
-
-            @Override
-            public List<TestEntity> findRange(int first, int max) throws IllegalStateException, IllegalArgumentException {
-                return List.of();
-            }
-
         };
     }
 
@@ -86,22 +68,6 @@ class IngresoDefaultDataAccesTest {
     void create_mostrarThrowException_cuandoEntityManagerEsNulo() {
         IngresoDefaultDataAcces<TestEntity, Integer> daoNull =
                 new IngresoDefaultDataAcces<>(TestEntity.class) {
-                    @Override
-                    public TestEntity update(TestEntity obj) throws IllegalStateException, IllegalArgumentException {
-                        return null;
-                    }
-
-                    @Override
-                    public TestEntity findById(Object id) throws IllegalStateException, IllegalArgumentException {
-                        return null;
-                    }
-
-                    @Override
-                    public List<TestEntity> findRange(int first, int max) throws IllegalStateException, IllegalArgumentException {
-                        return List.of();
-                    }
-
-
                     @Override
                     public EntityManager getEntityManager() {
                         return null;
@@ -159,22 +125,6 @@ class IngresoDefaultDataAccesTest {
     void delete_mostrarThrowException_cuandoEntityManagerEsNulo() {
         IngresoDefaultDataAcces<TestEntity, Integer> daoNull =
                 new IngresoDefaultDataAcces<>(TestEntity.class) {
-                    @Override
-                    public TestEntity update(TestEntity obj) throws IllegalStateException, IllegalArgumentException {
-                        return null;
-                    }
-
-                    @Override
-                    public TestEntity findById(Object id) throws IllegalStateException, IllegalArgumentException {
-                        return null;
-                    }
-
-                    @Override
-                    public List<TestEntity> findRange(int first, int max) throws IllegalStateException, IllegalArgumentException {
-                        return List.of();
-                    }
-
-
                     @Override
                     public EntityManager getEntityManager() {
                         return null;
