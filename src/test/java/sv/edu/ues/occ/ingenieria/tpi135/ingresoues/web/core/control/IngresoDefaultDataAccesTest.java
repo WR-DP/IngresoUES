@@ -62,10 +62,6 @@ class IngresoDefaultDataAccesTest {
                 return List.of();
             }
 
-            @Override
-            public int count() throws IllegalStateException {
-                return 0;
-            }
         };
     }
 
@@ -105,10 +101,6 @@ class IngresoDefaultDataAccesTest {
                         return List.of();
                     }
 
-                    @Override
-                    public int count() throws IllegalStateException {
-                        return 0;
-                    }
 
                     @Override
                     public EntityManager getEntityManager() {
@@ -182,10 +174,6 @@ class IngresoDefaultDataAccesTest {
                         return List.of();
                     }
 
-                    @Override
-                    public int count() throws IllegalStateException {
-                        return 0;
-                    }
 
                     @Override
                     public EntityManager getEntityManager() {
