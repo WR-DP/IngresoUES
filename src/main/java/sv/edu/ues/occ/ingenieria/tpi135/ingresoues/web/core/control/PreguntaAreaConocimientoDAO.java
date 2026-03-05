@@ -14,17 +14,17 @@ public class PreguntaAreaConocimientoDAO extends IngresoDefaultDataAcces<Pregunt
     @PersistenceContext(unitName = "IngresoPU")
     private EntityManager em;
 
-    //public PreguntaAreaConocimientoDAO() {
-    //    super(PreguntaAreaConocimientoDAO.class);
-    //}
+    public PreguntaAreaConocimientoDAO() {
+        super(PreguntaAreaConocimiento.class);
+    }
 
     @Override
     public EntityManager getEntityManager() {
-        return null;
+        return em;
     }
 
     @Override
     protected Class<PreguntaAreaConocimiento> getEntityClass() {
-        return null;
+        return PreguntaAreaConocimiento.class;
     }
 }

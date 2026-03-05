@@ -16,17 +16,17 @@ public class PreguntaDistractorDAO extends IngresoDefaultDataAcces<PreguntaDistr
     @PersistenceContext(unitName = "IngresoPU")
     private EntityManager em;
 
-        //public PreguntaDistractorDAO() {
-        //    super(PreguntaDistractorDAO.class);
-        //}
+    public PreguntaDistractorDAO() {
+        super(PreguntaDistractor.class);
+    }
 
     @Override
     public EntityManager getEntityManager() {
-        return null;
+        return em;
     }
 
     @Override
     protected Class<PreguntaDistractor> getEntityClass() {
-        return null;
+        return PreguntaDistractor.class;
     }
 }

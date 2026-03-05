@@ -14,17 +14,16 @@ public class DistractorAreaConocimientoDAO extends IngresoDefaultDataAcces<Distr
     @PersistenceContext(unitName = "IngresoPU")
     private EntityManager em;
 
-    //public DistractorAreaConocimientoDAO() {
-    //    super(DistractorAreaConocimientoDAO.class);
-    //}
+    public DistractorAreaConocimientoDAO() {
+        super(DistractorAreaConocimiento.class);
+    }
 
     @Override
     public EntityManager getEntityManager() {
-        return null;
     }
 
     @Override
     protected Class<DistractorAreaConocimiento> getEntityClass() {
-        return null;
+        return DistractorAreaConocimiento.class;
     }
 }

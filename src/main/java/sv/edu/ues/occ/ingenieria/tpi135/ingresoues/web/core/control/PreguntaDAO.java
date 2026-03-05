@@ -15,18 +15,17 @@ public class PreguntaDAO extends IngresoDefaultDataAcces<Pregunta, Object> imple
     @PersistenceContext(unitName = "IngresoPU")
     private EntityManager em;
 
-// public PreguntaDAO() {
-//     super(PreguntaDAO.class);
-// }
+    public PreguntaDAO() {
+        super(Pregunta.class);
+    }
 
     @Override
     public EntityManager getEntityManager() {
-        return null;
+        return em;
     }
 
     @Override
     protected Class<Pregunta> getEntityClass() {
-        return null;
+        return Pregunta.class;
     }
-
 }
